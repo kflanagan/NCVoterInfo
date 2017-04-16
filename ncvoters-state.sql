@@ -1,3 +1,4 @@
+-- This file was created for use with MySQL, it may not work properly with other databases engines
 -- drop schema NCVoters;
 -- create schema NCVoters;
 use NCVoters;
