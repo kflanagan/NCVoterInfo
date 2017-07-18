@@ -1,4 +1,3 @@
--- This file was created for use with MySQL, it may not work properly with other databases engines
 -- drop schema NCVoters;
 -- create schema NCVoters;
 use NCVoters;
@@ -7,5 +6,7 @@ use NCVoters;
 -- select * from voters where county_desc like 'Franklin' limit 100;
 -- select distinct county_desc from voters
 -- drop table voters;
--- select count(*) from voters where precinct_abbrv = 19-17 and party_cd in ('UNA', 'Dem')
-select * from voters limit 20
+--  select count(*) from voters where precinct_abbrv = 19-17 and party_cd in ('UNA', 'Dem')
+-- select * from voters limit 20
+-- select count(*) from voters where county_desc = 'wake' and precinct_abbrv = '19-17' and party_cd in ('DEM'); 
+select * from voters where first_name = 'andrea' and last_name = 'biondi';
