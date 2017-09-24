@@ -1,1 +1,11 @@
-mysql -u root -p < CreateNCVoters.sql
+echo " "
+echo "This script will create a new schema and table, then it will create "
+echo "a user named user, with a password of password."
+echo " "
+echo "When that is finished it will download the entire state voter" 
+echo "registration database and load it into that table"
+echo "it requires MySQL, wget and a database user root with full DBA rights"
+echo "on the MySQL instance"
+echo " "
+echo " "
+mysql -u kevin -p < CreateNCVoters.sql

@@ -1,37 +1,26 @@
 #! /bin/bash
-# This script assumes that it will be run out of a specific directory, edit
-# the sql script to adjust that before running
-# cleanup the compressed data file
-# rm ncvoter_statewide.zip
-# wget https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip
-# cleanup the uncompressed data file
-# rm ncvoter_Statewide.txt
-# unzip ncvoter_Statewide.zip
-# for the sake of space cleanup again
-# rm ncvoter_Statewide.zip
-# mysql -u kevin -p < reloadNC-Voters.sql
-
-#!/bin/bash
-
-ZIP=ncvoter_Statewide.zip
-if [ -f $ZIP ]; then
-   rm $ZIP
-   wget https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip
- 
-else
-   wget https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip
-fi
-
 
 
 TXT=ncvoter_Statewide.txt
 if [ -f $TXT ]; then
    rm $TXT
+fi
 
-else 
-   unzip ncvoter_Statewide.zip
+
+ZIP=ncvoter_Statewide.zip
+if [ -f $ZIP ]; then
+   rm $ZIP
+   wget https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip
+
+else
+   wget https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip
+fi
+
+ if [ -f $ZIP ]; then
+   unzip $ZIP
 
 fi
 
-mysql -u kevin -p < reloadNC-Voters.sql
+
+mysql -u user -p < reloadNC-Voters.sql
 
