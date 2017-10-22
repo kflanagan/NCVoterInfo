@@ -33,4 +33,4 @@ USER=root
 
 echo "This uses the user id of $USER"
 
-mysql -u kevin -p < CreateNCVoters.sql
+mysql -u root -p < CreateNCVoters.sql
