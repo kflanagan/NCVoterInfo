@@ -22,5 +22,9 @@ fi
 fi
 
 
-mysql -u user -p < reloadNC-Voters.sql
+USER=root
+
+echo "This process uses the MySQL account $USER"
+
+mysql -u $USER -p < reloadNC-Voters.sql
 
