@@ -33,4 +33,4 @@ USER=root
 
 echo "This uses the user id of $USER"
 
-mysql -u root -p < CreateNCVoters.sql
+mysql https://dev.mysql.com/doc/refman/5.5/en/mysql-command-options.html#option_mysql_local-infile -u root -p < CreateNCVoters.sql
