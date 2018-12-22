@@ -1,3 +1,0 @@
-sudo docker cp ncvoter_Statewide.txt voterDB:/data/ncvoter_Statewide.txt
-sudo docker cp loadNCVoters.sql voterDB:/data/loadNCVoters.sql
-sudo docker cp CreateNCVoter.sql voterDB:/data/CreateNCVoter.sql
