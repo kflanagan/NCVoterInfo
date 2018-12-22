@@ -5,22 +5,17 @@ https://portainer.readthedocs.io/en/latest/deployment.html
 Relevant commands
 sudo docker volume create portainer_data
 sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+mkdir /home/NCVoters
+cd /home/Voters
 git clone https://github.com/kflanagan/NCVoterInfo.git
 # sudo docker run --name VoterDB -p 3306:3306 -e MYSQL_ROOT_PASSWORD=voters -d mysql
 https://hub.docker.com/_/mysql/
-sudo docker run --name NCVoters-mysql -v /var/VoterData:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+sudo docker run -p 3306:3306 --name NCVoters-mysql -v /home/NCVoters:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
 
 
 
 http://localhost:9000
-open console of docker container
-create /data
 
-On Linux host
-in directory made from the git clone
-./intocontainer
-
-back to console 
 
 mysql -u root -p --local-infile  < createNCVoters.sql
 mysql -u root -p --local-infile  < loadNCVoters.sql
