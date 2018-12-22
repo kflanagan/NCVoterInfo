@@ -5,21 +5,30 @@ https://portainer.readthedocs.io/en/latest/deployment.html
 Relevant commands
 sudo docker volume create portainer_data
 sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-git clone https://github.com/kflanagan/NCVoterInfo.git
-sudo docker run --name VoterDB -p 3306:3306 -e MYSQL_ROOT_PASSWORD=voters -d mysql
+
+sudo mkdir /home/NCVoters
+sudo cd /home/NCVoters
+sudo git clone https://github.com/kflanagan/NCVoterInfo.git
+
+  pull and start a mysql instance 
+    name: NCVoterDB
+    user: root
+    password: voters
+    sudo docker run -d -p 3306:3306 --name NCVoterDB --restart always -e MYSQL_ROOT_PASSWORD=voters -v /home/NCVoters:/var/lib/mysql -v /etc/localtime:/etc/localtime:ro mysql:latest
 
 
 
+Open a browser 
+    http://localhost:9000
+    See Portainer and MySQL instance running
 
-http://localhost:9000
-open console of docker container
-create /data
+install MySQL Workbench from
+http://www.mysql.com/downloads/workbench
 
-On Linux host
-in directory made from the git clone
-./intocontainer
+   Connction info:
+     user: root
+     password: voters
+     host: localhost
+     port: 3306
 
-back to console 
 
-mysql -u root -p --local-infile  < createNCVoters.sql
-mysql -u root -p --local-infile  < loadNCVoters.sql
