@@ -1,5 +1,5 @@
 
-##H1 Pre-requisites
+## H1 Pre-requisites
 
 Linux system with docker and git client installed
 
@@ -7,9 +7,9 @@ Linux system with docker and git client installed
 
 1. First install Portainer for managing docker containers etc.
 https://portainer.readthedocs.io/en/latest/deployment.html
-Relevant commands:
-	sudo docker volume create portainer_data
-	sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+- Relevant commands:
+	- sudo docker volume create portainer_data
+	- sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
 
 2. Set the stage for the MySQL container:
