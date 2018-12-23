@@ -1,12 +1,14 @@
 
-## H1 Pre-requisites
+## Pre-requisites
 
     Linux system with docker and git client installed
 
+https://docs.docker.com/install/linux/docker-ce/ubuntu/ 
+
+https://help.ubuntu.com/lts/serverguide/git.html.en
 
 
-
-1. First install Portainer for managing docker containers etc.
+1. Install Portainer for managing docker containers etc.
 https://portainer.readthedocs.io/en/latest/deployment.html
 - Relevant commands
 
