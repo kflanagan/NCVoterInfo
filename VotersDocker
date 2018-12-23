@@ -1,0 +1,1 @@
+sudo docker run -d -p 3306:3306 --name NCVoterDB --restart always -e MYSQL_ROOT_PASSWORD=voters -v /home/NCVoters:/var/lib/mysql -v /etc/localtime:/etc/localtime:ro mysql:latest
