@@ -4,3 +4,4 @@ wget https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip
 # wget https://s3.amazonaws.com/dl.ncsbe.gov/Campaign_Finance/Database.zip
 
 # http://dl.ncsbe.gov/index.html?prefix=data/
+unzip ncvoter_Statewide.zip
