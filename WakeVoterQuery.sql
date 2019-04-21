@@ -1,3 +1,4 @@
+use NCVoters;
 SELECT first_name as 'First Name', last_name as 'Last Name', mail_addr1 as 'Street',
 w.voter_reg_num as 'Registration', age AS 'Birth year', birth_state AS 'Birth State' ,
 election_desc as 'Election Date', voting_method AS 'Voting method' , voted_party_desc AS 'Party',
