@@ -2,7 +2,7 @@ Create schema if not exists NCVoters charset ascii;
 use NCVoters;
 SET GLOBAL local_infile = 1;
 set global sql_mode = '';
-create table IF NOT Exists voters  (`county_id`		    smallint(2),
+create table IF NOT Exists RegVoters  (`county_id`		    smallint(2),
 	`county_desc`		    varchar	(15),
 	`voter_reg_num`	            char	(32),
 	`status_cd`		    char	(2),

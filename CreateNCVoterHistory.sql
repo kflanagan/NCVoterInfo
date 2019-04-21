@@ -1,7 +1,7 @@
 use NCVoters;
 SET GLOBAL local_infile = 1;
 set global sql_mode = '';
-create table IF NOT Exists VoterHistory  (
+create table IF NOT Exists VoterHistoryWake  (
 `county_id`          	    int(4),
 `county_desc`        	    varchar(60),
 `voter_reg_num`      	    varchar(12),
