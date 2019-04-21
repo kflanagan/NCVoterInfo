@@ -1,8 +1,8 @@
-Create schema if not exists NCVoters charset ascii;
+-- Create schema if not exists NCVoters charset ascii;
 use NCVoters;
 SET GLOBAL local_infile = 1;
 set global sql_mode = '';
-create table IF NOT Exists voters  (`county_id`		    smallint(2),
+create table IF NOT Exists RegVoters  (`county_id`		    smallint(2),
 	`county_desc`		    varchar	(15),
 	`voter_reg_num`	            char	(32),
 	`status_cd`		    char	(2),
@@ -72,8 +72,9 @@ create table IF NOT Exists voters  (`county_id`		    smallint(2),
 	`birth_year`		    char        (4),
 	`ncid` 		            char 	(12),
 	`vtd_abbrv` 		    char 	(6),
-	`vtd_desc` 		    char 	(60)
-key = (voter_reg_num) );
+	`vtd_desc` 		    char 	(60),
+key  (voter_reg_num)
+);
 
 use NCVoters;
 -- LOAD DATA local INFILE 'ncvoter_Statewide.txt' INTO TABLE voters FIELDS enclosed by '"'  IGNORE 1 LINES ;
