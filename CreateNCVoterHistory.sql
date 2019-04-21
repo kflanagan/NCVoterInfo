@@ -17,4 +17,5 @@ create table IF NOT Exists VoterHistory  (
 `voted_county_desc`  	    varchar(60),
 `vtd_label`          	    varchar(6),
 `vtd_description`		    varchar(60)
-)
+key = (voter_reg_num)
+);
